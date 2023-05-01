@@ -8,7 +8,7 @@
 
 :root {
   scroll-behavior: smooth;
-  --main-bg-color: #b1d182;         
+  --main-bg-color: #b1d182;  
 }
 
 header {
@@ -66,11 +66,7 @@ display: none;
   display: flex;
   box-sizing: border-box;
   overflow: hidden;
-  background: linear-gradient(
-    to bottom,
-    #b1d182 30%,
-    #ecf39e 100%
-  );
+  background: var(--main-bg-color); 
   padding: 0;
 }
 
@@ -186,7 +182,7 @@ display: none;
     width: 220px;
     box-sizing: border-box;
     overflow: hidden;
-    box-shadow: 20px 0 30px black;  
+    box-shadow: 1px 0 30px black;  
     transition: 0.3s;
     z-index:99;
     width: 200px;
@@ -208,6 +204,7 @@ display: none;
     height: auto;
     width: 100%;
     text-align: left;
+    text-decoration-line: none;
   }
 
   .left-nav.open a:hover {
@@ -232,7 +229,10 @@ display: none;
     top:20px;
     left: 24px;
     z-index: 9999;
-    
+  }
+
+  .left-side.active.fix {
+    position: fixed;
   }
 
   .left-side.active li::after {
@@ -261,6 +261,22 @@ display: none;
     transform: translate(0px,-9px) rotate(-40deg);
     transition: 0.1s;
   }
+
+  
+  .left-side.active.fix :nth-child(1){
+    transform: translate(0px,9px) rotate(40deg);
+  }
+
+  .left-side.active.fix :nth-child(2) {
+    opacity: 0;
+  }
+
+  .left-side.active.fix :nth-child(3) {
+    transform: translate(0px,-9px) rotate(-40deg);
+  }
+
+
+
 
 
 
@@ -313,6 +329,7 @@ display: none;
 
   .bio {
     display: flex;
+    position: relative;
     width: 100%;
     height: 100vh;
   }
@@ -322,5 +339,13 @@ display: none;
     flex-direction: column;
     position: relative;
     background: #ffffff;
+    margin: auto;
   }
+
+  .hero.scd p{
+    text-align: left;
+  }
+
+
+
 }
