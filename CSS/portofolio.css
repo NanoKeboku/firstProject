@@ -8,13 +8,13 @@
 
 :root {
   scroll-behavior: smooth;
-  --main-bg-color: #b1d182;  
+  --main-bg-color: #b1d182;
 }
 
 header {
   background-color: transparent;
 }
-        /* NAVBAR MIDLE */
+/* NAVBAR MIDLE */
 .nav {
   display: flex;
   position: relative;
@@ -40,10 +40,10 @@ header {
 }
 
 .left-nav {
-display: none;
+  display: none;
 }
 
-        /* BODY */
+/* BODY */
 .hero {
   display: flex;
   width: 100%;
@@ -51,10 +51,7 @@ display: none;
   overflow: hidden;
   align-items: center;
   padding: 0;
- 
-  }
-
-
+}
 
 .wrap {
   overflow: hidden;
@@ -65,7 +62,7 @@ display: none;
   display: flex;
   box-sizing: border-box;
   overflow: hidden;
-  background: var(--main-bg-color); 
+  background: var(--main-bg-color);
   padding: 0;
 }
 
@@ -75,14 +72,13 @@ display: none;
   width: 70%;
   margin: auto;
   position: relative;
-  padding-left:40px;
+  padding-left: 40px;
 }
 
 .c-1 p {
   color: #283618;
   font-size: 2vw;
   text-align: left;
-
 }
 
 .c-1 :nth-child(2),
@@ -92,8 +88,8 @@ display: none;
 }
 
 .c-2 {
-  width: 420px;
-  min-width: auto;
+  width: 400px;
+  height: 400px;
   min-height: auto;
   display: flex;
   border-radius: 100%;
@@ -113,7 +109,6 @@ display: none;
   display: flex;
   width: 100%;
   height: 30em;
-  
 }
 
 .hero.scd {
@@ -134,10 +129,6 @@ display: none;
   padding: 60px 40px;
   color: #b1d182;
 }
-
-
-
-
 
 /* myskill */
 
@@ -167,12 +158,6 @@ display: none;
   position: relative;
 }
 
-
-
-
-
-
-
 @media (max-width: 700px) {
   header {
     background-color: transparent;
@@ -188,18 +173,18 @@ display: none;
   .nav.detil {
     display: none;
   }
-        /* NAVBAR LEFT */
+  /* NAVBAR LEFT */
 
   .left-nav {
     display: none;
-    left:-30vw;
+    left: -30vw;
     background-color: #283618;
     width: 220px;
     box-sizing: border-box;
     overflow: hidden;
-    box-shadow: 1px 0 30px black;  
+    box-shadow: 1px 0 30px black;
     transition: 0.3s;
-    z-index:99;
+    z-index: 99;
     width: 200px;
     height: 100vh;
     position: fixed;
@@ -223,7 +208,7 @@ display: none;
     text-decoration-line: none;
   }
 
-  .left-nav a{
+  .left-nav a {
     border-bottom: 1px solid white;
   }
 
@@ -244,20 +229,18 @@ display: none;
     border-collapse: collapse;
     border-radius: 50px;
     position: absolute;
-    top:20px;
+    top: 20px;
     left: 10px;
     z-index: 9999;
   }
 
   .left-side.active.fix {
     position: fixed;
-    
   }
 
   .left-side.active.fix li::after {
-  background-color: white;
+    background-color: white;
   }
-
 
   .left-side.active li::after {
     content: " ";
@@ -270,9 +253,8 @@ display: none;
     position: relative;
   }
 
-
   .left-side.active:hover :nth-child(1) {
-    transform: translate(0px,9px) rotate(40deg);
+    transform: translate(0px, 9px) rotate(40deg);
     transition: 0.1s;
   }
 
@@ -282,13 +264,12 @@ display: none;
   }
 
   .left-side.active:hover :nth-child(3) {
-    transform: translate(0px,-9px) rotate(-40deg);
+    transform: translate(0px, -9px) rotate(-40deg);
     transition: 0.1s;
   }
 
-  
-  .left-side.active.fix :nth-child(1){
-    transform: translate(0px,9px) rotate(40deg);
+  .left-side.active.fix :nth-child(1) {
+    transform: translate(0px, 9px) rotate(40deg);
   }
 
   .left-side.active.fix :nth-child(2) {
@@ -296,15 +277,10 @@ display: none;
   }
 
   .left-side.active.fix :nth-child(3) {
-    transform: translate(0px,-9px) rotate(-40deg);
+    transform: translate(0px, -9px) rotate(-40deg);
   }
 
-
-
-
-
-
-            /* BODY */
+  /* BODY */
   .wrap {
     flex-direction: column-reverse;
     justify-content: center;
@@ -320,8 +296,8 @@ display: none;
   }
 
   .c-2 {
-    width: 200px;
-    height: 200px;
+    width: 270px;
+    height: 270px;
     position: relative;
     margin: auto;
     left: 0;
@@ -365,24 +341,46 @@ display: none;
     margin: auto;
   }
 
-  .hero.scd p{
+  .hero.scd p {
     text-align: left;
   }
-
-
-
 }
-
-
 
 @media (min-width: 701px) and (max-width: 1280px) {
   .container {
-    grid-template: 200px / auto auto ;
-    row-gap : 110px;
+    grid-template: 200px / auto auto;
+    row-gap: 110px;
   }
 
   .container > .card {
   }
 
+  .wrap {
+    flex-direction: column-reverse;
+    height: 46em;
+    max-width: 1470px;
+    width: 1500px;
+    margin: auto;
+    display: flex;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .c-2 {
+    min-width: 10vw;
+    max-height: auto;
+    position: relative;
+    margin: auto;
+    left: 0;
+  }
+
+  .c-1 p, .c-1 h1{
+    min-width: 400px;
+    height: 50px;
+    padding: 0;
+    position: relative;
+    margin: auto;
+    text-align: center;
+  }
 
 }
