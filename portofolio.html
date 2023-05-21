@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio</title>
+    <script src="https://kit.fontawesome.com/60bfabd217.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../CSS/portofolio.css" />
+</head>
+
+<body>
+    <header>
+        <ul class="left-side active">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        <!-- nav-kiri -->
+        <div class="left-nav">
+            <a href="#">ABOUT ME</a>
+            <a href="#">SKILLS</a>
+            <a href="#"> PROJECT</a>
+        </div>
+
+
+        <!-- nav-atas -->
+        <div class="nav detil">
+            <!--detil -->
+            <h2>
+                Nando
+                <i class="fa-solid fa-code"></i>
+            </h2>
+            <div class="right-nav open">
+                <a href="#"> ABOUT ME</a>
+                <a href="#"> SKILLS</a>
+                <a href="#"> PROJECT</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="wrap">
+            <div class="c-1">
+                <p>
+                    Hi there 🖐 , my name is
+                    <span style="color: #c9c9c9">Alhambra Ferdinando</span>
+                </p>
+
+                <h1 style="text-transform: uppercase; color: #cfb51f;">
+                    I'm
+                    Frontend Developer
+                    </span>
+                </h1>
+            </div>
+
+            <div class="c-2">
+                <img src="../IMAGE/card1.JPG" alt="Paris" />
+            </div>
+        </div>
+    </div>
+    <!--BIO-->
+    <div class="bio">
+        <div class="hero scd">
+            <h1 style="
+            color: #fff;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+              sans-serif;
+          ">
+                Hello, I'm Nando
+            </h1>
+            <p style="color: #fff; font-family: monospace; font-size: 17px">
+                Hello everyone, my name is Alhambra Ferdinando, a second-semester student majoring in Information
+                Technology at
+                Muhammadiyah Purworejo University. I am also a Front End Web Developer who has successfully developed
+                several
+                websites and web applications. Besides, I am actively involved in the web developer community and often
+                give
+                talks and workshops on web development at various events and seminars. I am very excited to share my
+                experiences
+                and knowledge with you all about the world of web development. Thank you
+            </p>
+        </div>
+    </div>
+
+
+
+    <!-- SKILL -->
+    <div class="myskill">
+        <div class="its-me">
+            <h1>What I Am Great At</h1>
+        </div>
+        <div class="container">
+            <!-- satu -->
+            <div class="card one">
+                <div class="head-card">
+                    <i class="fa-solid fa-pen-nib fa-5x" style="
+                    color: #fafafa;
+                    position: relative;
+                    top:-45px; "></i>
+                </div>
+                <div class="body-card">
+                    <h4>UI/UX DESIGN</h4>
+                </div>
+            </div>
+
+            <!-- dua -->
+            <div class="card two">
+                <div class="head-card">
+                    <i class="fa-solid fa-code fa-4x" style="
+                    color: #ffffff;
+                    position: relative;
+                    top:-45px;"></i>
+                </div>
+                <div class="body-card">
+                    <h4>WEB DEVELOPER</h4>
+                </div>
+            </div>
+
+            <!-- tiga -->
+            <div class="card three">
+                <div class="head-card">
+                    <i class="fa-solid fa-magnifying-glass fa-4x" style="
+                    color: #ffffff;
+                    position: relative;
+                    top:-45px;"></i>
+                </div>
+                <div class="body-card">
+                    <h4>WEB RESEARCH</h4>
+                </div>
+            </div>
+
+            <!-- empat -->
+            <div class="card four">
+                <div class="head-card">
+                    <i class="fa-solid fa-gamepad fa-4x" style="
+                    color: #ffffff;
+                    position: relative;
+                    top:-45px;"></i>
+                </div>
+                <div class="body-card">
+                    <h4>GAMER</h4>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+            let toggle = document.querySelector(".left-side.active");
+            let act = toggle.addEventListener("click", function () {
+                let tambah = document.querySelector(".left-nav");
+                tambah.classList.toggle("open");
+
+                toggle.classList.toggle("fix");
+            });
+
+        </script>
+</body>
+
+</html>
