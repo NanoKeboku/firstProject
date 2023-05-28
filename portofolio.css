@@ -18,7 +18,7 @@ header {
 .nav {
   display: flex;
   position: relative;
-  max-width: 1470px;
+  width: 100%;
   height: 52px;
   padding: 20px;
   box-sizing: border-box;
@@ -74,8 +74,7 @@ header {
 .wrap {
   overflow: hidden;
   height: 46em;
-  max-width: 1470px;
-  width: 1500px;
+  width: 100%;
   margin: auto;
   display: flex;
   box-sizing: border-box;
@@ -115,8 +114,7 @@ header {
   position: relative;
   margin-right: 40px;
   right: 100px;
-
-  box-shadow: 0px 0px 40px 50px rgba(27, 27, 27, 0.445);
+  box-shadow: 6px 7px 20px rgba(0,0,0,0.3);
 }
 
 .c-2 img {
@@ -131,23 +129,36 @@ header {
   height: 30em;
 }
 
+
+
 .hero.scd {
   background-color: transparent;
-  max-width: 1470px;
-  width: 1500px;
+  max-width: 100%;
   height: 100%;
   margin: auto;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   box-sizing: border-box;
   background-color: #202020;
+  justify-content: space-between;
 }
 
-.hero.scd p {
-  text-align: center;
-  padding: 60px 100px;
+
+.hero-right {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
+
+.hero.scd .hero-right p {
+  text-align: justify;
+  padding: 40px;
+}
+
+
 
 /* myskill */
 
@@ -155,7 +166,7 @@ header {
   display: flex;
   flex-direction: column;
   margin: auto;
-  max-width: 1470px;
+  width: 100%;
   height: 100vh;
   background-color: #252525;
 }
@@ -186,6 +197,7 @@ header {
   align-items: center;
   position: relative;
   border-collapse: collapse;
+
 }
 
 /* ICON CARD */
@@ -204,7 +216,102 @@ header {
 .card:hover {
   transform: translate(0, -20px);
   cursor: pointer;
+  box-shadow: 0px 15px 16px 1px rgb(29, 29, 29);
+  transition-duration: 0.2s;
 }
+
+
+.contact {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: #202020;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+textarea {
+  width: 400px;
+  height: 300px;
+  border-radius: 20px;
+  padding: 20px;
+  overflow:hidden;
+  color: white;
+  background-color: transparent;
+
+  box-shadow: 20px 20px 20px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+input[type="email"] {
+  border-radius: 10px;
+  padding: 10px;
+  width: 240px;
+
+  color: white;
+  background-color: transparent;
+  box-shadow: 6px 7px 20px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+
+input[type="submit"] {
+  padding: 13px;
+  background-color: rgb(19, 18, 18);
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  transform: translate(0,-1px);
+  background-color: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+
+#float-nav {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  height: auto;
+  padding: 20px;
+  position: fixed;
+  z-index: 9999;
+  right: 0;
+  top: 200px;
+}
+
+.bubble {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  margin: auto;
+  cursor: pointer;
+
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 700px) {
   header {
@@ -226,7 +333,7 @@ header {
   .left-nav {
     display: none;
     left: -30vw;
-    background-color: #283618;
+    background-color: #252525;
     width: 220px;
     box-sizing: border-box;
     overflow: hidden;
@@ -251,14 +358,11 @@ header {
     top: 100px;
     height: auto;
     width: 100%;
-    color: #cd8a39;
+    color: #fff;
     text-align: left;
     text-decoration-line: none;
   }
 
-  .left-nav a {
-    border-bottom: 1px solid white;
-  }
 
   .left-nav.open a:hover {
     background-color: #fffffe;
@@ -297,7 +401,7 @@ header {
     margin: 6px;
     height: 3px;
     border-radius: 100px;
-    background-color: black;
+    background-color: white;
     position: relative;
   }
 
@@ -385,16 +489,23 @@ header {
   .hero.scd {
     display: flex;
     flex-direction: column;
+    height: 100%;
     position: relative;
+    box-sizing: border-box;
     margin: auto;
   }
 
-  .hero.scd p {
-    text-align: left;
+  .hero.scd .hero-right {
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
+  
   .myskill {
-    height: 200vh;
+    height: 230vh;
+    padding-top: 130px;
+    box-sizing: border-box;
   }
 
   .container {
@@ -405,9 +516,47 @@ header {
     margin: auto;
     top: 0;
   }
+ 
+  #float-nav {
+    position: relative;
+    flex-direction: row;
+    background-color: #202020;
+    width: 100%;
+    height: 300px;
+    top: 0;
+    margin: auto;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .bubble {
+    margin: 30px;
+    left: 0;
+  }
+
+
+
 }
 
+
+
+
+
+
+
+
+
+
+
 @media (min-width: 701px) and (max-width: 1239px) {
+
+  .nav {
+    flex-direction: column;
+    height: 180px;
+    padding-top: 50px;
+  }
+
+
   .container {
     grid-template: 200px / auto auto;
     row-gap: 110px;
@@ -430,6 +579,7 @@ header {
     position: relative;
     margin: auto;
     left: 0;
+    top: 40px;
   }
 
   .c-1 p,
@@ -454,5 +604,30 @@ header {
 
   .container {
     top: 0;
+  }
+  .bio {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 90vh;
+  }
+
+  .hero.scd {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    box-sizing: border-box;
+    margin: auto;
+  }
+
+  .hero.scd img {
+      margin-top: 100px;
+  }
+
+  .hero.scd .hero-right {
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 }
