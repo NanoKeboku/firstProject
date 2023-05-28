@@ -9,6 +9,8 @@
     <title>Portofolio</title>
     <script src="https://kit.fontawesome.com/60bfabd217.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../CSS/portofolio.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -21,9 +23,10 @@
 
         <!-- nav-kiri -->
         <div class="left-nav">
-            <a href="#">ABOUT ME</a>
-            <a href="#">SKILLS</a>
+            <a href="#about">ABOUT ME</a>
+            <a href="#skill">SKILLS</a>
             <a href="#"> PROJECT</a>
+            <a href="#"> CONTACT</a>
         </div>
 
 
@@ -35,9 +38,10 @@
                 <i class="fa-solid fa-code"></i>
             </h2>
             <div class="right-nav open">
-                <a href="#"> ABOUT ME</a>
-                <a href="#"> SKILLS</a>
-                <a href="#"> PROJECT</a>
+                <a href="#about"> ABOUT ME</a>
+                <a href="#skill"> SKILLS</a>
+                    <a href="#"> PROJECT</a>
+                <a href="#"> CONTACT</a>
             </div>
         </div>
     </header>
@@ -65,24 +69,27 @@
     <!--BIO-->
     <div class="bio">
         <div class="hero scd">
-            <h1 style="
-            color: #fff;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
-              sans-serif;
-          ">
-                Hello, I'm Nando
-            </h1>
-            <p style="color: #fff; font-family: monospace; font-size: 17px">
-                Hello everyone, my name is Alhambra Ferdinando, a second-semester student majoring in Information
-                Technology at
-                Muhammadiyah Purworejo University. I am also a Front End Web Developer who has successfully developed
-                several
-                websites and web applications. Besides, I am actively involved in the web developer community and often
-                give
-                talks and workshops on web development at various events and seminars. I am very excited to share my
-                experiences
-                and knowledge with you all about the world of web development. Thank you
-            </p>
+            <div class="hero-right">
+                <h1 style="
+                color: #fff;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+                  sans-serif;
+              ">
+                    Hello, I'm Nando
+                </h1>
+                <p style="color: #fff; font-family: monospace; font-size: 17px">
+                    Hello everyone, my name is Alhambra Ferdinando, a second-semester student majoring in Information
+                    Technology at
+                    Muhammadiyah Purworejo University. I am also a Front End Web Developer who has successfully developed
+                    several
+                    websites and web applications. Besides, I am actively involved in the web developer community and often
+                    give
+                    talks and workshops on web development at various events and seminars. I am very excited to share my
+                    experiences
+                    and knowledge with you all about the world of web development. Thank you
+                </p>
+            </div>
+           
         </div>
     </div>
 
@@ -91,11 +98,13 @@
     <!-- SKILL -->
     <div class="myskill">
         <div class="its-me">
-            <h1>What I Am Great At</h1>
+            <h1 id="skill">What I Am Great At</h1>
         </div>
-        <div class="container">
+        <div class="container"  data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500">
             <!-- satu -->
-            <div class="card one">
+            <div class="card one" >
                 <div class="head-card">
                     <i class="fa-solid fa-pen-nib fa-5x" style="
                     color: #fafafa;
@@ -146,14 +155,23 @@
                 </div>
             </div>
         </div>
+    </div>
+      
+    <div class="contact">
+        <form>
+            <h1>Contact</h1><br><br><br>
+            <input type="email" placeholder="e-mail"><br><br>
+            <textarea id="subject" name="subject" placeholder="Write something.."></textarea><br><br>
+            <input type="submit" value="SUBMIT">
+        </form>
+    </div>
 
-
-
-
-
-
-
-
+    <div id="float-nav">
+        <div class="bubble one"><i class="fa-brands fa-instagram" style="color: #0c0c0e;"></i></div>
+        <div class="bubble two"><i class="fa-brands fa-twitter" style="color: #0c0c0e;"></i></div>
+        <div class="bubble three"><i class="fa-brands fa-github" style="color: #0c0c0e;"></i></div>
+        <div class="bubble four"><i class="fa-brands fa-twitch"style="color: #0c0c0e;"></i></div>
+    </div>
 
 
 
@@ -167,6 +185,35 @@
             });
 
         </script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script>
+    AOS.init({
+        // Global settings:
+        disable: false,
+        startEvent: 'DOMContentLoaded',
+        initClassName: 'aos-init', 
+        animatedClassName: 'aos-animate', 
+        useClassNames: false, 
+        disableMutationObserver: false, 
+        debounceDelay: 50, 
+        throttleDelay: 99, 
+        
+    
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 120, 
+        delay: 0, 
+        duration: 1000, 
+        easing: 'ease', 
+        once: false, 
+        mirror: false, 
+        anchorPlacement: 'top-bottom',
+    
+    });
+    </script>
 </body>
 
 </html>
